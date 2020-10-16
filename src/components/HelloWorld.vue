@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img src="../assets/logo.jpeg">
+    <img class="logo" src="../assets/logo.jpeg">
     <h1 align="center">商家回调平台</h1>
     <br/>
     <div>
@@ -153,8 +153,7 @@ export default {
 <style scoped>
   .hello {
     width: 300px;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin: 0 auto;
   }
   h1{
     font-weight: normal;
@@ -166,8 +165,9 @@ export default {
   span:hover{
     color: green;
   }
-  img{
-    width: 20%;
+  .logo {
     height: 20%;
+    width: 20%;
+    margin-top: 10px;
   }
 </style>

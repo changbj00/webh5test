@@ -8,7 +8,7 @@ import qs from 'qs'
 import 'view-design/dist/styles/iview.css';
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://127.0.0.1:8006'
+axios.defaults.baseURL = 'http://192.168.23.202:8092'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 axios.defaults.withCredentials = true
 axios.defaults.transformRequest = data => qs.stringify(data)

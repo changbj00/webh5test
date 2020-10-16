@@ -9,10 +9,11 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
+    //打包时加上.
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://127.0.0.1:8008',
+        target: 'http://192.168.23.202:8092',
         changeOrigin: true,
         pathRewrite: {
           '^/': '/'
@@ -21,7 +22,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: '127.0.0.1', // can be overwritten by process.env.HOST
-    port: 8006, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8001, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

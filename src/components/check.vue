@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="check">
-      <img src="../assets/logo.jpeg">
+      <img class="logo" src="../assets/logo.jpeg">
       <h1>查询数据</h1>
       <br/>
       <Form ref="casedata" :model="casedata" :rules="ruleValidate" :label-width="80">
@@ -145,8 +145,8 @@
 
 <style>
   .check {
-    width: 20%;
-    margin-left: 0px;
+    width: 300px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -161,9 +161,10 @@
     color: green;
   }
 
-  img {
-    width: 20%;
+  .logo {
     height: 20%;
+    width: 20%;
+    margin-top: 10px;
   }
 
   /*调整table cell间隔和行高*/
