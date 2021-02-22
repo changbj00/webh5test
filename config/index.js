@@ -10,7 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     //打包时加上.
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {
       '/': {
         target: 'http://192.168.23.202:8092',

@@ -35,11 +35,12 @@
         </FormItem>
         <FormItem label="环境" prop="environment">
           <Select v-model="userdata.environment" placeholder="请选择环境">
-            <Option value="d1">日常1套</Option>
-            <Option value="d2">日常2套</Option>
-            <Option value="d3">日常3套</Option>
-            <Option value="d4">日常4套</Option>
-            <Option value="mrongshu">生产环境</Option>
+            <Option value="dym.shurongdai.cn">通用日常</Option>
+            <Option value="d1.shurongdai.cn">日常1套</Option>
+            <Option value="d2.shurongdai.cn">日常2套</Option>
+            <Option value="d3.shurongdai.cn">日常3套</Option>
+            <Option value="d4.shurongdai.cn">日常4套</Option>
+            <Option value="mrongshu.shurongdai.cn">生产环境</Option>
           </Select>
         </FormItem>
         <FormItem label="回调链接" prop="backurl">
@@ -106,22 +107,24 @@ export default {
         console.log(valid)
 
         if (valid) {
-          var url='https://'+this.userdata.environment+'.shurongdai.cn/rongshu/src/p/'+this.userdata.backurl+'/index.html?'
+          var url='https://'+this.userdata.environment+'/rongshu/src/p/'+this.userdata.backurl+'/index.html?'
             +'pid='+this.userdata.pid+'&borrowId='+borrowid+'&timestamp='+timestamp+'&status='
-            +this.userdata.status+'&nextPage='+this.userdata.nextPage+'&wallet=0&GRAY'
+            +this.userdata.status+'&nextPage='+this.userdata.nextPage+'&uid='+this.userdata.uid+'&wallet=0&GRAY'
           if (this.userdata.backurl==='cashBack') {
             this.$Message.info('暂无提现回调页，先跳百度!')
             window.location.href='http://www.baidu.com'
           } else if(this.userdata.backurl==='bindCardBack') {
             url=url+'&cardType=1&bankCardId=-1'
+            alert(url)
             window.location.href=url
           }else if(this.userdata.backurl==='operatorBack') {
             url=url+'&isDataAuth=1'
+            alert(url)
             window.location.href=url
           }else {
+            alert(url)
             window.location.href=url
           }
-
             console.log(url)
         } else {
           this.$Message.error('请检查后重新输入!')
